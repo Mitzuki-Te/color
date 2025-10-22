@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <form action="/registrar" method="post">
+    <fieldset>
+      <!-- Datos personales-->
+       <legend>Datos Personales</legend>
+       <label>Nombre Completo:</label>
+       <input type="text" id="usuario" name="usuario" placeholder="Juanito Gonzales" required>
+       <label>Correo:</label>
+       <input type="email" id="email" name="email" placeholder="abcd@gmail.com" required>
+       <label>Telefono Celular:</label>
+       <input type="tel" id="telefono" name="telefono" placeholder="+xx xxxxxxxx" required>
+       <label>Fecha de Nacimiento:</label>
+       <input type="date" id="nacimiento" name="nacimiento" required>
+       
+       <div id="genero">
+        <span>Género:</span>
+        <label><input type="radio" name="genero" value="F">Femenino</label>
+        <label><input type="radio" name="genero" value="M">Masculino</label>
+        <label><input type="radio" name="genero" value="O">Otro</label>
+       </div>
+
+       <label>Color Favorito:</label>
+       <input type="color" id="color" name="color" required>
+       <label>Materia Favorita:</label>
+       <div>
+        <label><input type="checkbox" name="materias" value="mate">Matemáticas</label>
+        <label><input type="checkbox" name="materias" value="leng">Lenguaje</label>
+        <label><input type="checkbox" name="materias" value="his">Historia</label>
+       </div>
+    </fieldset>
+    <fieldset>
+      <!--Acceso del Usuario-->
+      <legend>Acceso del Usuario</legend>
+      <label>Usuario:</label>
+       <input type="text" id="usuario_p" name="usuario_p" placeholder="Juanito Gonzales" required>
+       <label>Contraseña:</label>
+       <input type="password" id="clave" name="clave" required>
+       <label>Rol:</label>
+       <select id="rol" name="rol">
+        <option value="defaul">Selecciona tu Rol:</option>
+        <option value="estudiante">Estudiante</option>
+        <option value="docente">Docente</option>
+        <option value="admin">Administrador</option>
+       </select>
+    </fieldset>
+    <fieldset>
+      <!--Preferencias del Usuario-->
+      <legend>Preferencias del Usuario</legend>
+
+      <label>Nivel de Ingles (0-10):</label>
+      <input type="range" id="ingles" name="nivel_ingles" min="0" max="10" step="1">
+      <label>Hora Favorita:</label>
+      <input type="time" id="hora" name="horafav">
+      <label>Mes Favorito:</label>
+      <input type="month" id="mes" name="mesfav">
+      <label>Describcción del Usuario:</label>
+       <textarea placeholder="Escriba un poco sobre usted"></textarea>
+    </fieldset>
+    <fieldset>
+      <!--Carga de Datos del Usuario:-->
+      <legend>Subida de Datos</legend>
+
+      <label for="">Suba sus Datos:</label>
+      <input type="file" id="cv" name="cv" accept=".pdf, .xms, .csv, .docx, .exe">
+    </fieldset>
+    <!--Botones del Formulario-->
+    <button type="reset">Limpiar</button>
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>
